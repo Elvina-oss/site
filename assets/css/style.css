@@ -2,8 +2,47 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	font-size:1.2em;
+	background-color:#f7f8ea;
+	color:#555;
+}
+p{
+	padding:0 0 20px 0;
+	line-height:1.7em;
+}
+h1,h2{
+	font:normal 170% 'century gothic' arial;
+	margin: 0 0 15px 0;
+	padding: 15px 0 5px 0;
+	color:#000;
+}
+h2{
+	font-size:140%;
+}
+hr{
+	border:solid 2px #f4eacef9;
+}
+a,a:hover{
+	outline:none;
+	text-decoration: underline;
+}
+a{
+	color:black;
+}
+a:hover{
+	color:red;
+}
+ul{
+	margin:2px 0 22px 17px;
+}
+ul li{
+	margin:0 0 6px 0;
+	padding:0 0 4px 5px;
+	line-height: 1.5em;
+}
 .header {
-	background-color: teal;
+	background-image:url("C:/project/assets/img/5.jpg");
 	height:177px;
 	font-size: 0.8em;
 	margin-left: 0px;
@@ -24,14 +63,14 @@
 }
 .logo_text h1, .logo_text h1 a, .logo_text h1 a:hover {
 	padding:22px 0 0 0;
-	color: #fff;
+	color: black;
 	letter-spacing: 0.1em;/*интервал между символами*/
 	text-decoration: none;/*стилизация ссылок(вроде)*/
 }
 .logo_text h2{
 	font-size: 0.9em;
 	padding:4px 0 0 0;
-	color: #999;	
+	color: #6e6e6e;	
 }
 .menubar {
 	width:900px;
@@ -47,23 +86,64 @@ ul.menu li {
 	margin:1px 2px 0 0;
 }
 ul.menu li a {
-	font:normal 150% 'trebuchet ms', sans-serif;
+	font:normal 100% 'trebuchet ms', sans-serif;
 	display: block;
 	height:20px;
 	padding:6px 35px 5px 28px;
-	color: #fff;
+	color: black;
 	text-decoration: none; 
 }
-ul.menu li.selected {
-	color: red;
+ul.menu li.selected a{
+	color: silver;
 }
 ul.menu li a:hover {
-	color:black
+	color:grey;	
+}
+.content {
+	text-align: left;
+	width: 800px;
+	padding:0 0 0 5px;
+	width: 880px;
+ 	overflow:hidden;
+ 	margin: 20px auto 0 auto;
+
+}
+/*.content h2, .content img, .content p{
+	text-align: center;
+
+}*/
+
+.content img{
+	
+	border-radius: 5%;
+	border:solid 2px #dad7d5;
+	margin-right: 40%;
+}
+.content a{
+	text-decoration:none;
+}
+.first{
+	margin-bottom: 5%;
+}
+.famous_blocks{
+	
+}
+.footer{
+	width:100%;
+	height:100px;
+	padding:14px 0 14px 0;
+	text-align: center;
+	background-image:url("C:/project/assets/img/5.jpg");
+	color: black;
+	margin-left:0px;
+	margin-right:0px;
+	min-width: 900px;
+	font-size:0.5em;
 }
 /*
 	засунуть в хтмл после хэдэра для поиска и входа
 	<div class="site_content">
-		<div class="sitebar_container">
+		<div class="sidebar_container">
 			<div class="sidebar">
 				<h2>Поиск</h2>
 				<form method="post" action="#" id="search_form">
@@ -71,6 +151,104 @@ ul.menu li a:hover {
 					<input type="submit" class="btn" value="найти"/>
 				</form>
 			</div>
+			<div class="sidebar">
+				<h2>Вход</h2>
+				<form method="post" action='#' id="login">
+					<input type="text" name="login_field" placeholder="логин"/>
+					<input type="password"name="pasport_field"placeholder="пароль"/>
+					<input type="submit" class="btn"value="вход"/>
+					<div class="lables_passreg_text">
+						<span><a href="#">забыли пароль?</a></span> | <span><a href="#">регистрация</a></span>
+					</div>
+				</form>
+			</div>
+			<div class="sidebar">
+				<h2>Новости</h2>
+				<span>31.02.2018</h2>
+				<p>Тут написана какая-то новость<p>
+				<a href="#">читать</a>
+			</div>
+			<div class="sidebar">
+				<h2>Рейтинг фильмов<h2>
+				<ul>
+					<li><a href="#">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
+					<li><a href="#">Матрица</a><span class="rating_sidebar">8.0</span></li>
+					<li><a href="#">Безумный Макс</a><span class="rating_sidebar">7.8</span></li>
+					<li><a href="#">Облачный атлас</a><span class="rating_sidebar">7.8</span></li>
+				</ul>
+			</div>
 		</div>
 	</div>
+
+	а это уже в цсс надо засунуть
+
+	
+	
+	input[type="text"], input[type="password"], input[type="search"] {
+		color:#5d5d5d;
+		width:60%;
+		padding:8px;
+	}
+	input, textarea{
+		outline:none;
+		border:none;
+		border:solid 1px #f2f2f2;
+	}
+	
+	ul{
+	margin:2px 0 22px 17px;
+	}
+	ul li{
+	margin:0 0 6px 0;
+	padding:0 0 4px 5px;
+	line-height:1.5em;
+	}
+	a,a:hover{
+		outline:none;
+		text-decoration:none;
+		color:#aeb002;
+	}
+	.site_content {
+		width: 880px;
+		overflow:hidden;
+		margin:20px auto 0 auto;
+		background-color:white;
+	}
+	.sidebar_container {
+		float:right;
+	}
+	.sidebar {
+		float:right;
+		width:222px;
+		padding:5%;
+		margin:0 0 16px 0;
+		border:solid 1px #f2f2f2;
+		border-radius:5%;
+		background-color:#f9f9f9;
+
+	}
+	.btn{
+	padding:8px;
+	backfround:color;
+	cursor:pointer;
+	}
+	sidebar h2{
+		color:#136cb2;
+	}	
+	.lables_passreg_text
+	{
+		font-size:0.7em;
+		margin-top:3%;	
+		margin-left:2%;
+	}
+	.sidebar.ul{
+	margin:0;
+	}
+	.sidebar.ul li{
+	list-style-bar:none;
+	margin:0 0 0 0;
+	}
+	.sidebar-rating{
+	float:right;
+	}
 */
